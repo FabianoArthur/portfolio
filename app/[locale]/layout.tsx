@@ -71,7 +71,8 @@ export async function generateMetadata({
       "TypeScript",
       "React",
       "portfolio",
-      "São Paulo",
+      "Brasília",
+      "Distrito Federal",
       "Brasil",
     ],
     openGraph: {
