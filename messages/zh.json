@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "title": "Fabiano Arthur — 宁静而精准的软件。",
+    "titleTemplate": "%s · Fabiano Arthur",
+    "description": "Fabiano Arthur (Zhyorg) — 全栈开发者。我打造稳定运行、可扩展、尊重用户的产品。",
+    "ogTitle": "Fabiano Arthur — 宁静而精准的软件。",
+    "ogDescription": "全栈开发者。2026 年 6 月起可承接新项目。",
+    "ogAlt": "Fabiano Arthur — 宁静而精准的软件。",
+    "twitterDescription": "全栈开发者。2026 年 6 月起可承接新项目。"
+  },
+  "nav": {
+    "work": "作品",
+    "about": "关于",
+    "contact": "联系",
+    "availableForHire": "正在接单",
+    "ariaHome": "{alias} — 首页"
+  },
+  "hero": {
+    "chip": "v{year} · 作品集",
+    "h1Line1": "用代码雕刻",
+    "h1Line2": "宁静与精准。",
+    "body": "我是 <name>Fabiano Arthur</name> —— 全栈开发者。我打造稳定运行、可扩展、尊重用户的产品。",
+    "ctaPrimary": "开始一个项目",
+    "ctaSecondary": "查看作品"
+  },
+  "stack": {
+    "heading": "我每天都在使用的技术"
+  },
+  "about": {
+    "card1": {
+      "chip": "我做什么",
+      "title": "端到端工程。",
+      "body": "从架构到最后一个像素。我能与数据库、设计师与产品同样顺畅地沟通。",
+      "fig": "fig. 01"
+    },
+    "card2": {
+      "chip": "方法",
+      "title": "在重要的地方放慢节奏。",
+      "body": "深思熟虑的决策，趁手的工具，小步的发布。"
+    },
+    "tags": {
+      "typeSafe": "类型安全",
+      "tested": "经过测试",
+      "observable": "可观测",
+      "documented": "已文档化"
+    }
+  },
+  "stats": {
+    "years": "年编写代码",
+    "tech": "种语言 & 框架",
+    "coffees": "杯咖啡",
+    "goal": "个目标 — 做到最好"
+  },
+  "variations": {
+    "section": {
+      "chip": "四种方向",
+      "title": "四种呈现方式。",
+      "note": "点击打开"
+    },
+    "labels": {
+      "tone": "调性",
+      "risk": "风险",
+      "memorable": "难忘"
+    },
+    "v3": {
+      "chip": "V3 · BRUTALIST",
+      "title": "终端与原始 HTML。",
+      "description": "等宽字体、粗边框、硬阴影、滚动横幅与终端提示符。给想展示直接技术个性、不拐弯抹角的人。",
+      "tone": "直接",
+      "risk": "高"
+    },
+    "v4": {
+      "chip": "V4 · DARK ELEGANT",
+      "title": "高级黑色调。",
+      "description": "深邃的黑、斜体衬线、微妙的渐变。Linear / Vercel 风格——技术自信与低调奢华。几乎不会出错。",
+      "tone": "沉稳",
+      "risk": "低"
+    },
+    "v5": {
+      "chip": "V5 · VIBRANT",
+      "title": "活泼，又专业。",
+      "description": "饱和的色彩、几何形状、轻松的文案。Figma / Stripe Sessions 风格——乐观而严谨。",
+      "tone": "温暖",
+      "risk": "中"
+    },
+    "v6": {
+      "chip": "V6 · RETRO",
+      "title": "1976 年的电脑手册。",
+      "description": "奶油色纸张、VT323 字体、CRT 显示器、磁带和明信片。致敬这门手艺的历史。",
+      "tone": "怀旧",
+      "risk": "中"
+    }
+  },
+  "contact": {
+    "chip": "联系我",
+    "h2Line1": "有想法吗？",
+    "h2Line2": "一起来打造。",
+    "body": "24 小时内回复。坦诚交流，不绕弯。选择你方便的渠道。",
+    "whatsapp": "WhatsApp — 直接沟通",
+    "schedule": "{phone} · 周一 → 周五 · BRT"
+  },
+  "footer": {
+    "copyright": "© {year} {name} · Distrito Federal",
+    "tagline": "在夜色中设计。",
+    "github": "github",
+    "linkedin": "linkedin"
+  },
+  "og": {
+    "h1": "宁静而精准的软件。",
+    "body": "Fabiano Arthur — 全栈开发者。我打造稳定运行、可扩展、尊重用户的产品。",
+    "availability": "正在接单 · 2026 年 6 月 →"
+  },
+  "languageSwitcher": {
+    "ariaLabel": "切换语言"
+  },
+  "variationSwitcher": {
+    "trigger": "切换设计",
+    "close": "关闭",
+    "ariaOpen": "切换设计",
+    "ariaClose": "关闭设计切换器",
+    "menuHeader": "可用设计",
+    "current": "当前"
+  }
+}

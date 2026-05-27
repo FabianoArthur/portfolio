@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "title": "Fabiano Arthur — Software com precisão silenciosa.",
+    "titleTemplate": "%s · Fabiano Arthur",
+    "description": "Fabiano Arthur (Zhyorg) — desenvolvedor full-stack. Construo produtos que funcionam, escalam e respeitam quem os usa.",
+    "ogTitle": "Fabiano Arthur — Software com precisão silenciosa.",
+    "ogDescription": "Desenvolvedor full-stack. Disponível para novos projetos a partir de Junho 2026.",
+    "ogAlt": "Fabiano Arthur — Software com precisão silenciosa.",
+    "twitterDescription": "Desenvolvedor full-stack. Disponível para novos projetos a partir de Junho 2026."
+  },
+  "nav": {
+    "work": "Trabalhos",
+    "about": "Sobre",
+    "contact": "Contato",
+    "availableForHire": "Disponível para projetos",
+    "ariaHome": "{alias} — início"
+  },
+  "hero": {
+    "chip": "v{year} · portfolio",
+    "h1Line1": "Software com",
+    "h1Line2": "precisão silenciosa.",
+    "body": "Sou <name>Fabiano Arthur</name> — desenvolvedor full-stack. Construo produtos que funcionam, escalam e respeitam quem os usa.",
+    "ctaPrimary": "Iniciar um projeto",
+    "ctaSecondary": "Ver trabalhos"
+  },
+  "stack": {
+    "heading": "Tecnologias que uso, todos os dias"
+  },
+  "about": {
+    "card1": {
+      "chip": "O que eu faço",
+      "title": "Engenharia ponta a ponta.",
+      "body": "Da arquitetura ao último pixel. Falo igualmente bem com banco de dados, com designers e com produto.",
+      "fig": "fig. 01"
+    },
+    "card2": {
+      "chip": "Abordagem",
+      "title": "Devagar onde importa.",
+      "body": "Decisões deliberadas, ferramentas afiadas, releases pequenos."
+    },
+    "tags": {
+      "typeSafe": "Type-safe",
+      "tested": "Testado",
+      "observable": "Observável",
+      "documented": "Documentado"
+    }
+  },
+  "stats": {
+    "years": "anos escrevendo código",
+    "tech": "linguagens & frameworks",
+    "coffees": "cafés consumidos",
+    "goal": "meta — fazer bem feito"
+  },
+  "variations": {
+    "section": {
+      "chip": "As 4 direções",
+      "title": "Quatro maneiras de aparecer.",
+      "note": "Clique pra abrir"
+    },
+    "labels": {
+      "tone": "Tom",
+      "risk": "Risco",
+      "memorable": "Memorável"
+    },
+    "v3": {
+      "chip": "V3 · BRUTALIST",
+      "title": "Terminal & raw HTML.",
+      "description": "Tipografia mono, bordas grossas, sombras duras, marquees e prompts de terminal. Para quem quer mostrar personalidade técnica sem rodeios.",
+      "tone": "direto",
+      "risk": "alto"
+    },
+    "v4": {
+      "chip": "V4 · DARK ELEGANT",
+      "title": "Premium noir.",
+      "description": "Pretos profundos, serifa italic, gradientes sutis. Vibe Linear / Vercel — confiança técnica com luxo discreto. Quase impossível errar.",
+      "tone": "sóbrio",
+      "risk": "baixo"
+    },
+    "v5": {
+      "chip": "V5 · VIBRANT",
+      "title": "Playful, profissional.",
+      "description": "Cores saturadas, formas geométricas, copy descontraída em PT-BR. Vibe Figma / Stripe Sessions — otimista, mas com rigor.",
+      "tone": "caloroso",
+      "risk": "médio"
+    },
+    "v6": {
+      "chip": "V6 · RETRO",
+      "title": "Manual de computador, 1976.",
+      "description": "Papel creme, tipografia VT323, monitor CRT, cassetes e cartão-postal. Para mostrar afeto pela história do ofício.",
+      "tone": "nostálgico",
+      "risk": "médio"
+    }
+  },
+  "contact": {
+    "chip": "Vamos conversar",
+    "h2Line1": "Tem algo em mente?",
+    "h2Line2": "Vamos construir.",
+    "body": "Resposta em até 24h. Conversa franca, sem floreio. Escolha o canal que preferir.",
+    "whatsapp": "WhatsApp — chat direto",
+    "schedule": "{phone} · seg → sex · BRT"
+  },
+  "footer": {
+    "copyright": "© {year} {name} · São Paulo",
+    "tagline": "Designed in the dark.",
+    "github": "github",
+    "linkedin": "linkedin"
+  },
+  "og": {
+    "h1": "Software com precisão silenciosa.",
+    "body": "Fabiano Arthur — desenvolvedor full-stack. Construo produtos que funcionam, escalam e respeitam quem os usa.",
+    "availability": "Disponível para projetos · Junho 2026 →"
+  },
+  "languageSwitcher": {
+    "ariaLabel": "Trocar idioma"
+  },
+  "variationSwitcher": {
+    "trigger": "Alterar design",
+    "close": "Fechar",
+    "ariaOpen": "Alterar design",
+    "ariaClose": "Fechar troca de design",
+    "menuHeader": "Designs disponíveis",
+    "current": "atual"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "title": "Fabiano Arthur — Software with quiet precision.",
+    "titleTemplate": "%s · Fabiano Arthur",
+    "description": "Fabiano Arthur (Zhyorg) — full-stack developer. I build products that work, scale, and respect the people who use them.",
+    "ogTitle": "Fabiano Arthur — Software with quiet precision.",
+    "ogDescription": "Full-stack developer. Available for new projects from June 2026.",
+    "ogAlt": "Fabiano Arthur — Software with quiet precision.",
+    "twitterDescription": "Full-stack developer. Available for new projects from June 2026."
+  },
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "availableForHire": "Available for hire",
+    "ariaHome": "{alias} — home"
+  },
+  "hero": {
+    "chip": "v{year} · portfolio",
+    "h1Line1": "Software with",
+    "h1Line2": "quiet precision.",
+    "body": "I'm <name>Fabiano Arthur</name> — a full-stack developer. I build products that work, scale, and respect the people who use them.",
+    "ctaPrimary": "Start a project",
+    "ctaSecondary": "View work"
+  },
+  "stack": {
+    "heading": "Tech I use, every day"
+  },
+  "about": {
+    "card1": {
+      "chip": "What I do",
+      "title": "End-to-end engineering.",
+      "body": "From architecture to the last pixel. I speak equally well to databases, designers, and product.",
+      "fig": "fig. 01"
+    },
+    "card2": {
+      "chip": "Approach",
+      "title": "Slow where it matters.",
+      "body": "Deliberate decisions, sharp tools, small releases."
+    },
+    "tags": {
+      "typeSafe": "Type-safe",
+      "tested": "Tested",
+      "observable": "Observable",
+      "documented": "Documented"
+    }
+  },
+  "stats": {
+    "years": "years writing code",
+    "tech": "languages & frameworks",
+    "coffees": "coffees consumed",
+    "goal": "goal — do it well"
+  },
+  "variations": {
+    "section": {
+      "chip": "The 4 directions",
+      "title": "Four ways to show up.",
+      "note": "Click to open"
+    },
+    "labels": {
+      "tone": "Tone",
+      "risk": "Risk",
+      "memorable": "Memorable"
+    },
+    "v3": {
+      "chip": "V3 · BRUTALIST",
+      "title": "Terminal & raw HTML.",
+      "description": "Mono type, thick borders, hard shadows, marquees, and terminal prompts. For when you want raw technical personality, no fluff.",
+      "tone": "direct",
+      "risk": "high"
+    },
+    "v4": {
+      "chip": "V4 · DARK ELEGANT",
+      "title": "Premium noir.",
+      "description": "Deep blacks, italic serif, subtle gradients. Linear / Vercel vibe — technical confidence with quiet luxury. Hard to get wrong.",
+      "tone": "sober",
+      "risk": "low"
+    },
+    "v5": {
+      "chip": "V5 · VIBRANT",
+      "title": "Playful, professional.",
+      "description": "Saturated colors, geometric shapes, breezy copy. Figma / Stripe Sessions vibe — optimistic but rigorous.",
+      "tone": "warm",
+      "risk": "medium"
+    },
+    "v6": {
+      "chip": "V6 · RETRO",
+      "title": "Computer manual, 1976.",
+      "description": "Cream paper, VT323 typography, CRT monitor, cassette tapes, and postcards. To show love for the history of the craft.",
+      "tone": "nostalgic",
+      "risk": "medium"
+    }
+  },
+  "contact": {
+    "chip": "Get in touch",
+    "h2Line1": "Got something in mind?",
+    "h2Line2": "Let's build.",
+    "body": "Reply within 24h. Honest talk, no fluff. Pick the channel you prefer.",
+    "whatsapp": "WhatsApp — direct chat",
+    "schedule": "{phone} · mon → fri · BRT"
+  },
+  "footer": {
+    "copyright": "© {year} {name} · Distrito Federal",
+    "tagline": "Designed in the dark.",
+    "github": "github",
+    "linkedin": "linkedin"
+  },
+  "og": {
+    "h1": "Software with quiet precision.",
+    "body": "Fabiano Arthur — full-stack developer. I build products that work, scale, and respect the people who use them.",
+    "availability": "Available for hire · June 2026 →"
+  },
+  "languageSwitcher": {
+    "ariaLabel": "Switch language"
+  },
+  "variationSwitcher": {
+    "trigger": "Change design",
+    "close": "Close",
+    "ariaOpen": "Change design",
+    "ariaClose": "Close design switcher",
+    "menuHeader": "Available designs",
+    "current": "current"
+  }
+}

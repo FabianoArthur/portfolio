@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0c;
+  --color-ink: #e8e6e3;
+  --color-purple: #b48cff;
+  --color-cyan: #6ad2ff;
+  --color-green: #7cff9c;
+  --color-whatsapp: #25d366;
+  --color-dim: rgba(232, 230, 227, 0.55);
+  --color-line: rgba(255, 255, 255, 0.07);
+  --color-line-strong: rgba(255, 255, 255, 0.1);
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-surface-2: rgba(255, 255, 255, 0.02);
+
+  --color-v3-ink: #000000;
+  --color-v3-cream: #e8e6df;
+  --color-v3-orange: #ff4d1c;
+  --color-v3-yellow: #fffd9c;
+  --color-v3-green: #7cff7c;
+  --color-v3-blue: #9cb8ff;
+
+  --color-v5-ink: #1c1410;
+  --color-v5-cream: #fff7ea;
+  --color-v5-orange: #ff5b1f;
+  --color-v5-yellow: #ffd34e;
+  --color-v5-pink: #ff5fa2;
+  --color-v5-purple: #7a52f5;
+  --color-v5-blue: #2a6fdb;
+  --color-v5-green: #1f8a5b;
+
+  --color-v6-cream: #f0e5cf;
+  --color-v6-paper: #e8d9b8;
+  --color-v6-ink: #3a1f0d;
+  --color-v6-orange: #d4501e;
+  --color-v6-rust: #8b3a0a;
+  --color-v6-teal: #2d6b6b;
+  --color-v6-mustard: #c79a2a;
+
+  --font-sans: var(--font-inter), "SF Pro Text", -apple-system, system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Liberation Mono", monospace;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(180, 140, 255, 0.3);
+  color: #fff;
+}

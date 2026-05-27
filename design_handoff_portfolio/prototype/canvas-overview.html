@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Fabiano Arthur — Landing Page Explorations</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Spectral:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Archivo+Black&family=DM+Serif+Display:ital@0;1&family=VT323&display=swap" rel="stylesheet" />
+
+<style>
+  html, body { margin: 0; padding: 0; background: #f0eee9; }
+  * { box-sizing: border-box; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="variations/v1-editorial.jsx"></script>
+<script type="text/babel" src="variations/v2-swiss.jsx"></script>
+<script type="text/babel" src="variations/v3-brutal.jsx"></script>
+<script type="text/babel" src="variations/v4-dark.jsx"></script>
+<script type="text/babel" src="variations/v5-vibrant.jsx"></script>
+<script type="text/babel" src="variations/v6-retro.jsx"></script>
+
+<script type="text/babel">
+const W = 1280;
+
+function App() {
+  return (
+    <DesignCanvas>
+      <DCSection
+        id="intro"
+        title="Fabiano Arthur · Zhyorg — Landing Page Explorations"
+        subtitle="Seis direções distintas para o mesmo portfólio. Cada artboard é uma landing page completa — clique no ícone de expandir para focar uma. Como ainda não há projetos definidos, os cards de portfólio usam placeholders elegantes que sinalizam ‘vagas abertas’."
+      >
+        <DCPostIt>
+          <strong>Como ler →</strong>
+          <br /><br />
+          Comece pelo V1 (editorial) e vá comparando. Cada uma é uma personalidade diferente.
+          <br /><br />
+          Quando escolher uma (ou misturar 2-3), me diga e eu polo, refino as cópias e adiciono microinterações reais.
+        </DCPostIt>
+      </DCSection>
+
+      <DCSection
+        id="classic"
+        title="Direções clássicas"
+        subtitle="Refinadas, atemporais, baixo risco — combinam confiança técnica com discrição."
+      >
+        <DCArtboard id="v1" label="V1 · Editorial — revista impressa" width={W} height={2900}>
+          <V1Editorial />
+        </DCArtboard>
+        <DCArtboard id="v2" label="V2 · Swiss — minimalismo tipográfico" width={W} height={2800}>
+          <V2Swiss />
+        </DCArtboard>
+        <DCArtboard id="v4" label="V4 · Dark Elegant — premium noir" width={W} height={2700}>
+          <V4Dark />
+        </DCArtboard>
+      </DCSection>
+
+      <DCSection
+        id="bold"
+        title="Direções ousadas"
+        subtitle="Personalidade forte, memoráveis, mais arriscadas — mostram criatividade e ponto de vista."
+      >
+        <DCArtboard id="v3" label="V3 · Brutalist — terminal & ASCII" width={W} height={2900}>
+          <V3Brutal />
+        </DCArtboard>
+        <DCArtboard id="v5" label="V5 · Vibrant — playful pro" width={W} height={2900}>
+          <V5Vibrant />
+        </DCArtboard>
+        <DCArtboard id="v6" label="V6 · Retro — manual de computador 1976" width={W} height={3000}>
+          <V6Retro />
+        </DCArtboard>
+      </DCSection>
+
+      <DCSection
+        id="next"
+        title="Próximos passos"
+        subtitle=""
+      >
+        <DCPostIt>
+          <strong>Quando escolher →</strong>
+          <br /><br />
+          Posso (1) refinar a direção escolhida com microinterações, hover states e scroll animations; (2) criar versões mobile responsivas; (3) montar um sistema de design completo para a marca Zhyorg.
+          <br /><br />
+          Também posso misturar — ex: tipografia do V1 + cor do V5 + layout do V2.
+        </DCPostIt>
+      </DCSection>
+    </DesignCanvas>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
