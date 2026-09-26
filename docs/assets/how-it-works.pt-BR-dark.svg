@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" width="880" height="470" role="img" aria-labelledby="title desc" lang="pt-BR">
+<title id="title">Como o portfólio é gerado e servido</title>
+<desc id="desc">Build: a cada push na main, os textos em inglês e português e a lista de projetos passam pelo next build como export estático; a Content-Security-Policy é injetada e conferida, rodam lint, tipos, testes e a varredura de segredos do gitleaks, e o deploy-pages publica HTML, CSS e JS puros no GitHub Pages. Visita: a página raiz escolhe inglês ou português pelo idioma do navegador, a página escolhida aplica o tema claro ou escuro antes da primeira pintura e cada card de projeto leva ao repositório e à demo.</desc>
+<style>
+text{font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;fill:#e6edf3}
+.b{font-size:15px;font-weight:600}
+.m{font-size:12.5px;fill:#9198a1}
+.code{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;font-size:11.5px;fill:#6ad2ff}
+.h{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;fill:#b894ff}
+.s{font-size:12px;fill:#9198a1;font-style:italic}
+.bg{fill:#0d1117;stroke:#30363d}
+.zone{fill:#11161d;stroke:#30363d;stroke-dasharray:4 4}
+.card{fill:#161b22;stroke:#3d444d}
+.e{fill:none;stroke:#6e7681;stroke-width:1.5;stroke-linejoin:round}
+.dot{fill:#b894ff}
+.halo{fill:#b894ff;opacity:.25}
+.hl{fill:none;stroke:#b894ff;stroke-width:2;stroke-linejoin:round;opacity:0;animation:10s linear infinite}
+.pk{opacity:0;offset-rotate:0deg;animation:10s cubic-bezier(.45,0,.55,1) infinite}
+@keyframes m0{0%,0.00%{offset-distance:0%;opacity:0}0.30%{opacity:1}2.73%{offset-distance:100%;opacity:1}4.23%,100%{offset-distance:100%;opacity:0}}
+@keyframes h0{0%,0.00%{opacity:0}0.30%,2.73%{opacity:.9}6.73%,100%{opacity:0}}
+@keyframes m1{0%,3.93%{offset-distance:0%;opacity:0}4.23%{opacity:1}6.65%{offset-distance:100%;opacity:1}8.15%,100%{offset-distance:100%;opacity:0}}
+@keyframes h1{0%,3.93%{opacity:0}4.23%,6.65%{opacity:.9}10.65%,100%{opacity:0}}
+@keyframes m2{0%,7.85%{offset-distance:0%;opacity:0}8.15%{opacity:1}10.58%{offset-distance:100%;opacity:1}12.08%,100%{offset-distance:100%;opacity:0}}
+@keyframes h2{0%,7.85%{opacity:0}8.15%,10.58%{opacity:.9}14.58%,100%{opacity:0}}
+@keyframes m3{0%,11.78%{offset-distance:0%;opacity:0}12.08%{opacity:1}73.42%{offset-distance:100%;opacity:1}74.92%,100%{offset-distance:100%;opacity:0}}
+@keyframes h3{0%,11.78%{opacity:0}12.08%,73.42%{opacity:.9}77.42%,100%{opacity:0}}
+@keyframes m4{0%,74.62%{offset-distance:0%;opacity:0}74.92%{opacity:1}77.35%{offset-distance:100%;opacity:1}78.85%,100%{offset-distance:100%;opacity:0}}
+@keyframes h4{0%,74.62%{opacity:0}74.92%,77.35%{opacity:.9}81.35%,100%{opacity:0}}
+@keyframes m5{0%,78.55%{offset-distance:0%;opacity:0}78.85%{opacity:1}81.27%{offset-distance:100%;opacity:1}82.77%,100%{offset-distance:100%;opacity:0}}
+@keyframes h5{0%,78.55%{opacity:0}78.85%,81.27%{opacity:.9}85.27%,100%{opacity:0}}
+@keyframes m6{0%,82.47%{offset-distance:0%;opacity:0}82.77%{opacity:1}85.20%{offset-distance:100%;opacity:1}86.70%,100%{offset-distance:100%;opacity:0}}
+@keyframes h6{0%,82.47%{opacity:0}82.77%,85.20%{opacity:.9}89.20%,100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.pk,.hl{display:none;animation:none}}
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#6e7681"/></marker></defs>
+<rect x="0.5" y="0.5" width="879" height="469" rx="16" class="bg"/>
+<rect x="18" y="18" width="844" height="158" rx="12" class="zone"/>
+<text x="34" y="44" class="h">Build · a cada push na main</text>
+<rect x="18" y="282" width="844" height="158" rx="12" class="zone"/>
+<text x="34" y="306" class="h">Visita</text>
+<path d="M210,108 H246" class="e" marker-end="url(#ah)"/>
+<path d="M422,108 H458" class="e" marker-end="url(#ah)"/>
+<path d="M634,108 H670" class="e" marker-end="url(#ah)"/>
+<path d="M758,158 V240 H122 V322" class="e" marker-end="url(#ah)"/>
+<path d="M210,372 H246" class="e" marker-end="url(#ah)"/>
+<path d="M422,372 H458" class="e" marker-end="url(#ah)"/>
+<path d="M634,372 H670" class="e" marker-end="url(#ah)"/>
+<text x="440" y="232" class="s" text-anchor="middle">serve</text>
+<rect x="34" y="58" width="176" height="100" rx="12" class="card"/>
+<text x="122" y="92" class="b" text-anchor="middle">Conteúdo</text>
+<text x="122" y="118" class="code" text-anchor="middle">messages/{en,pt}.json</text>
+<text x="122" y="138" class="code" text-anchor="middle">lib/projects.ts</text>
+<rect x="246" y="58" width="176" height="100" rx="12" class="card"/>
+<text x="334" y="92" class="b" text-anchor="middle">next build</text>
+<text x="334" y="118" class="m" text-anchor="middle">export estático</text>
+<text x="334" y="138" class="m" text-anchor="middle">/en/ e /pt/ pré-renderizados</text>
+<rect x="458" y="58" width="176" height="100" rx="12" class="card"/>
+<text x="546" y="92" class="b" text-anchor="middle">Gates</text>
+<text x="546" y="118" class="m" text-anchor="middle">CSP injetada + conferida</text>
+<text x="546" y="138" class="m" text-anchor="middle">lint · tipos · testes · gitleaks</text>
+<rect x="670" y="58" width="176" height="100" rx="12" class="card"/>
+<text x="758" y="92" class="b" text-anchor="middle">GitHub Pages</text>
+<text x="758" y="118" class="m" text-anchor="middle">actions/deploy-pages</text>
+<text x="758" y="138" class="m" text-anchor="middle">só arquivos estáticos</text>
+<rect x="34" y="322" width="176" height="100" rx="12" class="card"/>
+<text x="122" y="356" class="b" text-anchor="middle">Visitante</text>
+<text x="122" y="382" class="m" text-anchor="middle">idioma do navegador</text>
+<text x="122" y="402" class="m" text-anchor="middle">preferência claro/escuro</text>
+<rect x="246" y="322" width="176" height="100" rx="12" class="card"/>
+<text x="334" y="356" class="b" text-anchor="middle">/</text>
+<text x="334" y="382" class="m" text-anchor="middle">escolhe en ou pt</text>
+<text x="334" y="402" class="m" text-anchor="middle">sem JS? links simples</text>
+<rect x="458" y="322" width="176" height="100" rx="12" class="card"/>
+<text x="546" y="356" class="b" text-anchor="middle">/en/ · /pt/</text>
+<text x="546" y="382" class="m" text-anchor="middle">tema antes da pintura</text>
+<text x="546" y="402" class="m" text-anchor="middle">revelação no scroll, a11y</text>
+<rect x="670" y="322" width="176" height="100" rx="12" class="card"/>
+<text x="758" y="356" class="b" text-anchor="middle">Projetos</text>
+<text x="758" y="382" class="m" text-anchor="middle">repositórios no GitHub</text>
+<text x="758" y="402" class="m" text-anchor="middle">demos no Pages</text>
+<path d="M210,108 H246" class="hl" style="animation-name:h0"/>
+<g class="pk" style="offset-path:path('M210,108 H246');animation-name:m0"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M422,108 H458" class="hl" style="animation-name:h1"/>
+<g class="pk" style="offset-path:path('M422,108 H458');animation-name:m1"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M634,108 H670" class="hl" style="animation-name:h2"/>
+<g class="pk" style="offset-path:path('M634,108 H670');animation-name:m2"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M758,158 V240 H122 V322" class="hl" style="animation-name:h3"/>
+<g class="pk" style="offset-path:path('M758,158 V240 H122 V322');animation-name:m3"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M210,372 H246" class="hl" style="animation-name:h4"/>
+<g class="pk" style="offset-path:path('M210,372 H246');animation-name:m4"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M422,372 H458" class="hl" style="animation-name:h5"/>
+<g class="pk" style="offset-path:path('M422,372 H458');animation-name:m5"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<path d="M634,372 H670" class="hl" style="animation-name:h6"/>
+<g class="pk" style="offset-path:path('M634,372 H670');animation-name:m6"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+</svg>
