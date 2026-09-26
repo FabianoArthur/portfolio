@@ -3,8 +3,8 @@ export const site = {
   alias: "Zhyorg",
   email: "fabianoarthur47@gmail.com",
   github: "https://github.com/FabianoArthur",
-  linkedin: "https://www.linkedin.com/in/fabiano-arthur-p-c-de-oliveira-30bb39215/",
-  source: "https://github.com/FabianoArthur/portifolio",
+  linkedin: "https://www.linkedin.com/in/fabianoarthur/",
+  source: "https://github.com/FabianoArthur/portfolio",
 } as const;
 
 export const navLinks = [
