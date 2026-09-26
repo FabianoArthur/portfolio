@@ -9,16 +9,16 @@ describe("normalizeBasePath", () => {
   });
 
   it("adds a leading slash and strips trailing ones", () => {
-    expect(normalizeBasePath("portifolio")).toBe("/portifolio");
-    expect(normalizeBasePath("/portifolio/")).toBe("/portifolio");
+    expect(normalizeBasePath("portfolio")).toBe("/portfolio");
+    expect(normalizeBasePath("/portfolio/")).toBe("/portfolio");
     expect(normalizeBasePath("/a/b//")).toBe("/a/b");
   });
 });
 
 describe("withBasePath", () => {
   it("prefixes absolute paths with the base path", () => {
-    expect(withBasePath("/en/", "/portifolio")).toBe("/portifolio/en/");
-    expect(withBasePath("en/", "/portifolio")).toBe("/portifolio/en/");
+    expect(withBasePath("/en/", "/portfolio")).toBe("/portfolio/en/");
+    expect(withBasePath("en/", "/portfolio")).toBe("/portfolio/en/");
   });
 
   it("leaves paths untouched without a base path", () => {

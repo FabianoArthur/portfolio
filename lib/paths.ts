@@ -9,7 +9,7 @@ export function withBasePath(path: string, basePath: string): string {
   return `${basePath}${p}`;
 }
 
-/** Base path the site is served under (e.g. "/portifolio" on GitHub Pages). */
+/** Base path the site is served under (e.g. "/portfolio" on GitHub Pages). */
 export const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
 
 /** Public origin; the full site URL is always origin + base path, so they can't drift. */
