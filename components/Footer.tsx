@@ -3,30 +3,22 @@ import { site } from "@/lib/site";
 
 export function Footer() {
   const t = useTranslations("footer");
+  const tA11y = useTranslations("a11y");
 
   return (
-    <footer className="flex flex-col items-center justify-between gap-3 border-t border-white/[0.06] px-6 py-8 text-[13px] text-dim md:flex-row md:px-16">
-      <span>{t("copyright", { year: site.year, name: site.name })}</span>
-      <span className="flex gap-4">
+    <footer className="border-t border-line">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-8 text-sm text-dim sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <p>{t("copyright", { year: new Date().getFullYear() })}</p>
         <a
-          href={site.socials.github}
+          href={site.source}
           target="_blank"
-          rel="noreferrer"
-          className="transition-colors hover:text-ink"
+          rel="noopener noreferrer"
+          className="underline decoration-line-strong underline-offset-4 transition-colors hover:text-ink"
         >
-          {t("github")}
+          {t("source")}
+          <span className="sr-only"> {tA11y("externalLink")}</span>
         </a>
-        <span aria-hidden>·</span>
-        <a
-          href={site.socials.linkedin}
-          target="_blank"
-          rel="noreferrer"
-          className="transition-colors hover:text-ink"
-        >
-          {t("linkedin")}
-        </a>
-      </span>
-      <span className="italic">{t("tagline")}</span>
+      </div>
     </footer>
   );
 }
