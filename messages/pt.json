@@ -1,124 +1,137 @@
 {
   "metadata": {
-    "title": "Fabiano Arthur — Software com precisão silenciosa.",
+    "title": "Fabiano Arthur — Desenvolvedor full-stack",
     "titleTemplate": "%s · Fabiano Arthur",
-    "description": "Fabiano Arthur (Zhyorg) — desenvolvedor full-stack. Construo produtos que funcionam, escalam e respeitam quem os usa.",
-    "ogTitle": "Fabiano Arthur — Software com precisão silenciosa.",
-    "ogDescription": "Desenvolvedor full-stack. Disponível para novos projetos a partir de Junho 2026.",
-    "ogAlt": "Fabiano Arthur — Software com precisão silenciosa.",
-    "twitterDescription": "Desenvolvedor full-stack. Disponível para novos projetos a partir de Junho 2026."
+    "description": "Fabiano Arthur (Zhyorg) — desenvolvedor full-stack que cria fluxos multiagente para o Claude Code, aplicações web e APIs. Projetos, stack e contato.",
+    "ogAlt": "Fabiano Arthur — desenvolvedor full-stack"
+  },
+  "a11y": {
+    "skipToContent": "Pular para o conteúdo",
+    "externalLink": "(abre em nova aba)"
   },
   "nav": {
-    "work": "Trabalhos",
+    "home": "Fabiano Arthur — início",
+    "primary": "Principal",
+    "work": "Projetos",
     "about": "Sobre",
-    "contact": "Contato",
-    "availableForHire": "Disponível para projetos",
-    "ariaHome": "{alias} — início"
+    "stack": "Stack",
+    "contact": "Contato"
+  },
+  "languageSwitcher": {
+    "label": "Idioma",
+    "switchTo": "Ler em {language}"
+  },
+  "themeToggle": {
+    "toLight": "Mudar para o tema claro",
+    "toDark": "Mudar para o tema escuro"
   },
   "hero": {
-    "chip": "v{year} · portfolio",
-    "h1Line1": "Software com",
-    "h1Line2": "precisão silenciosa.",
-    "body": "Sou <name>Fabiano Arthur</name> — desenvolvedor full-stack. Construo produtos que funcionam, escalam e respeitam quem os usa.",
-    "ctaPrimary": "Iniciar um projeto",
-    "ctaSecondary": "Ver trabalhos"
-  },
-  "stack": {
-    "heading": "Tecnologias que uso, todos os dias"
+    "eyebrow": "Desenvolvedor full-stack · Brasil",
+    "titleLine1": "Software com",
+    "titleLine2": "precisão silenciosa.",
+    "body": "Sou <name>Fabiano Arthur</name>. Crio fluxos multiagente para o Claude Code, aplicações web e APIs — testados, documentados e pequenos o bastante para entender.",
+    "ctaPrimary": "Ver projetos",
+    "ctaSecondary": "Entrar em contato"
   },
   "about": {
-    "card1": {
-      "chip": "O que eu faço",
-      "title": "Engenharia ponta a ponta.",
-      "body": "Da arquitetura ao último pixel. Falo igualmente bem com banco de dados, com designers e com produto.",
-      "fig": "fig. 01"
-    },
-    "card2": {
-      "chip": "Abordagem",
-      "title": "Devagar onde importa.",
-      "body": "Decisões deliberadas, ferramentas afiadas, releases pequenos."
-    },
-    "tags": {
-      "typeSafe": "Type-safe",
-      "tested": "Testado",
-      "observable": "Observável",
-      "documented": "Documentado"
+    "eyebrow": "Sobre",
+    "title": "Da API ao último pixel.",
+    "p1": "Trabalho na stack inteira: modelagem de dados, APIs, filas, front-ends e os pipelines que colocam tudo no ar. Ultimamente, isso inclui ferramentas que deixam agentes de IA fazer engenharia de verdade sem bagunçar o repositório.",
+    "p2": "Gosto de entregas pequenas, testes honestos e documentação que responde a pergunta da próxima pessoa antes que ela pergunte.",
+    "principles": {
+      "tested": {
+        "title": "Testado",
+        "body": "Lógica ganha teste unitário; os gates rodam no CI antes de qualquer merge."
+      },
+      "documented": {
+        "title": "Documentado",
+        "body": "READMEs em inglês e português, com diagramas que mostram o fluxo real."
+      },
+      "secure": {
+        "title": "Seguro por padrão",
+        "body": "Varredura de segredos, dependências fixadas e CI com o mínimo de permissão."
+      }
     }
   },
-  "stats": {
-    "years": "anos escrevendo código",
-    "tech": "linguagens & frameworks",
-    "coffees": "cafés consumidos",
-    "goal": "meta — fazer bem feito"
+  "projects": {
+    "eyebrow": "Projetos",
+    "title": "O que eu construí.",
+    "intro": "Projetos de código aberto — cada um com código, testes e, quando faz sentido, uma demo no ar.",
+    "code": "Código",
+    "demo": "Demo",
+    "codeFor": "Código-fonte de {project} no GitHub",
+    "demoFor": "Demo de {project}",
+    "techLabel": "Feito com",
+    "kinds": {
+      "tooling": "Ferramentas de IA",
+      "app": "Aplicação web",
+      "api": "API"
+    },
+    "items": {
+      "kitchen": {
+        "title": "claude-code-kitchen",
+        "description": "Vários agentes do Claude Code em paralelo, cada um na sua tarefa e no seu git worktree, cada um terminando num pull request — enquanto a sessão principal continua livre para conversar com você."
+      },
+      "discordHq": {
+        "title": "claude-code-discord-hq",
+        "description": "Um servidor do Discord definido como código, mais hooks que só te chamam quando uma sessão de IA precisa de você. Comande seus agentes pelo celular."
+      },
+      "controlRoom": {
+        "title": "Painel de agentes",
+        "description": "Um painel ao vivo de agentes de código trabalhando em paralelo: fila, status, logs em streaming, gates e pull requests — movido por uma simulação determinística com seed."
+      },
+      "algorithms": {
+        "title": "Visualizador de algoritmos",
+        "description": "Algoritmos de ordenação e de caminho passo a passo, numa grade editável, com controle de velocidade e comparação lado a lado."
+      },
+      "arcade": {
+        "title": "Arcade em canvas",
+        "description": "Mini-jogos clássicos escritos do zero em canvas HTML, com controles de teclado e toque e placar local."
+      },
+      "regex": {
+        "title": "Playground de regex",
+        "description": "Escreva uma expressão regular, veja os matches e grupos destacados e leia uma explicação em linguagem natural de cada parte — com um parser feito à mão."
+      },
+      "designSystem": {
+        "title": "Design system",
+        "description": "Componentes React acessíveis sobre tokens de cor, tipografia e espaço, com temas claro e escuro e um site de documentação com exemplos vivos."
+      },
+      "parking": {
+        "title": "API de estacionamento",
+        "description": "Uma API de estacionamento com vagas, reservas, entrada e saída e regras de tarifação por tempo, erros padronizados e documentação OpenAPI."
+      },
+      "barbershop": {
+        "title": "Plataforma de barbearia",
+        "description": "Gestão de barbearias com várias unidades: agenda, serviços e equipe, com API em NestJS e front-end em React."
+      }
+    }
   },
-  "variations": {
-    "section": {
-      "chip": "As 4 direções",
-      "title": "Quatro maneiras de aparecer.",
-      "note": "Clique pra abrir"
-    },
-    "labels": {
-      "tone": "Tom",
-      "risk": "Risco",
-      "memorable": "Memorável"
-    },
-    "v3": {
-      "chip": "V3 · BRUTALIST",
-      "title": "Terminal & raw HTML.",
-      "description": "Tipografia mono, bordas grossas, sombras duras, marquees e prompts de terminal. Para quem quer mostrar personalidade técnica sem rodeios.",
-      "tone": "direto",
-      "risk": "alto"
-    },
-    "v4": {
-      "chip": "V4 · DARK ELEGANT",
-      "title": "Premium noir.",
-      "description": "Pretos profundos, serifa italic, gradientes sutis. Vibe Linear / Vercel — confiança técnica com luxo discreto. Quase impossível errar.",
-      "tone": "sóbrio",
-      "risk": "baixo"
-    },
-    "v5": {
-      "chip": "V5 · VIBRANT",
-      "title": "Playful, profissional.",
-      "description": "Cores saturadas, formas geométricas, copy descontraída em PT-BR. Vibe Figma / Stripe Sessions — otimista, mas com rigor.",
-      "tone": "caloroso",
-      "risk": "médio"
-    },
-    "v6": {
-      "chip": "V6 · RETRO",
-      "title": "Manual de computador, 1976.",
-      "description": "Papel creme, tipografia VT323, monitor CRT, cassetes e cartão-postal. Para mostrar afeto pela história do ofício.",
-      "tone": "nostálgico",
-      "risk": "médio"
+  "stack": {
+    "eyebrow": "Stack",
+    "title": "Ferramentas que eu uso.",
+    "groups": {
+      "languages": "Linguagens",
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "data": "Dados e infra",
+      "ai": "Ferramentas de IA"
     }
   },
   "contact": {
-    "chip": "Vamos conversar",
-    "h2Line1": "Tem algo em mente?",
-    "h2Line2": "Vamos construir.",
-    "body": "Resposta em até 24h. Conversa franca, sem floreio. Escolha o canal que preferir.",
-    "whatsapp": "WhatsApp — chat direto",
-    "schedule": "{phone} · seg → sex · BRT"
+    "eyebrow": "Contato",
+    "title": "Tem algo em mente?",
+    "body": "Dúvida sobre um projeto, um bug ou uma ideia — e-mail é o jeito mais rápido de falar comigo.",
+    "email": "E-mail",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
   },
   "footer": {
-    "copyright": "© {year} {name} · Distrito Federal",
-    "tagline": "Designed in the dark.",
-    "github": "github",
-    "linkedin": "linkedin"
+    "copyright": "© {year} Fabiano Arthur",
+    "source": "Código-fonte deste site"
   },
-  "og": {
-    "h1": "Software com precisão silenciosa.",
-    "body": "Fabiano Arthur — desenvolvedor full-stack. Construo produtos que funcionam, escalam e respeitam quem os usa.",
-    "availability": "Disponível para projetos · Junho 2026 →"
-  },
-  "languageSwitcher": {
-    "ariaLabel": "Trocar idioma"
-  },
-  "variationSwitcher": {
-    "trigger": "Alterar design",
-    "close": "Fechar",
-    "ariaOpen": "Alterar design",
-    "ariaClose": "Fechar troca de design",
-    "menuHeader": "Designs disponíveis",
-    "current": "atual"
+  "notFound": {
+    "title": "Página não encontrada",
+    "body": "Essa página não existe.",
+    "back": "Voltar para o início"
   }
 }

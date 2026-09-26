@@ -1,46 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Instrument_Serif } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import pick from "@/lib/pick";
 import { notFound } from "next/navigation";
+import type { ReactNode } from "react";
+import { instrumentSerif, inter } from "@/app/fonts";
+import { DocumentHead } from "@/components/DocumentHead";
 import { routing } from "@/i18n/routing";
-import type { Locale } from "@/lib/site";
-import "../globals.css";
+import { htmlLang, locales, ogLocale, type Locale } from "@/lib/locale";
+import { siteUrl } from "@/lib/paths";
+import { site } from "@/lib/site";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  display: "swap",
-});
-
-const siteUrl = "https://zhyorg.dev";
-
-const ogLocale: Record<Locale, string> = {
-  pt: "pt_BR",
-  en: "en_US",
-  es: "es_ES",
-  zh: "zh_CN",
-};
-
-const htmlLang: Record<Locale, string> = {
-  pt: "pt-BR",
-  en: "en",
-  es: "es",
-  zh: "zh-CN",
-};
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -53,67 +24,47 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
-
   const t = await getTranslations({ locale, namespace: "metadata" });
+  const url = `${siteUrl}/${locale}/`;
 
   return {
-    metadataBase: new URL(siteUrl),
+    metadataBase: new URL(`${siteUrl}/`),
     title: { default: t("title"), template: t("titleTemplate") },
     description: t("description"),
-    applicationName: "Zhyorg · Portfolio",
-    authors: [{ name: "Fabiano Arthur", url: siteUrl }],
-    creator: "Fabiano Arthur",
-    keywords: [
-      "Fabiano Arthur",
-      "Zhyorg",
-      "full-stack",
-      "Next.js",
-      "TypeScript",
-      "React",
-      "portfolio",
-      "Brasília",
-      "Distrito Federal",
-      "Brasil",
-    ],
+    applicationName: `${site.name} · Portfolio`,
+    authors: [{ name: site.name, url: site.github }],
+    creator: site.name,
+    alternates: {
+      canonical: url,
+      languages: {
+        ...Object.fromEntries(locales.map((l) => [htmlLang[l], `${siteUrl}/${l}/`])),
+        "x-default": `${siteUrl}/`,
+      },
+    },
     openGraph: {
       type: "website",
+      url,
       locale: ogLocale[locale as Locale],
-      url: `${siteUrl}/${locale}`,
-      siteName: "Fabiano Arthur · Portfolio",
-      title: t("ogTitle"),
-      description: t("ogDescription"),
-      images: [
-        {
-          url: "/opengraph-image",
-          width: 1200,
-          height: 630,
-          alt: t("ogAlt"),
-        },
-      ],
+      siteName: `${site.name} · Portfolio`,
+      title: t("title"),
+      description: t("description"),
+      images: [{ url: `${siteUrl}/opengraph-image.png`, width: 1200, height: 630, alt: t("ogAlt") }],
     },
     twitter: {
       card: "summary_large_image",
-      title: t("ogTitle"),
-      description: t("twitterDescription"),
-      images: ["/opengraph-image"],
-    },
-    alternates: {
-      canonical: `/${locale}`,
-      languages: {
-        "pt-BR": "/pt",
-        en: "/en",
-        es: "/es",
-        "zh-CN": "/zh",
-        "x-default": "/pt",
-      },
+      title: t("title"),
+      description: t("description"),
+      images: [`${siteUrl}/opengraph-image.png`],
     },
     robots: { index: true, follow: true },
   };
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0c",
-  colorScheme: "dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0c" },
+    { media: "(prefers-color-scheme: light)", color: "#f7f6f2" },
+  ],
   width: "device-width",
   initialScale: 1,
 };
@@ -121,29 +72,22 @@ export const viewport: Viewport = {
 export default async function LocaleLayout({
   children,
   params,
-}: Readonly<{
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}>) {
+}: Readonly<{ children: ReactNode; params: Promise<{ locale: string }> }>) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
-  const messages = await getMessages();
+  // Only client components need messages in the browser; everything else is
+  // rendered at build time. Keeps the inline payload small.
+  const messages = pick(await getMessages(), ["themeToggle"]);
 
   return (
     <html
-      lang={htmlLang[locale as Locale]}
-      className={`${inter.variable} ${instrumentSerif.variable} h-full bg-bg antialiased`}
+      lang={htmlLang[locale]}
+      className={`${inter.variable} ${instrumentSerif.variable}`}
+      suppressHydrationWarning
     >
-      <body
-        className="flex min-h-full flex-col bg-bg font-sans text-ink"
-        style={{
-          backgroundImage:
-            "radial-gradient(ellipse 1200px 600px at 50% -10%, rgba(180,140,255,0.12), transparent 60%)",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
-        }}
-      >
+      <DocumentHead />
+      <body className="flex min-h-dvh flex-col font-sans">
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>

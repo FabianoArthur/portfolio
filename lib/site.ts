@@ -2,59 +2,24 @@ export const site = {
   name: "Fabiano Arthur",
   alias: "Zhyorg",
   email: "fabianoarthur47@gmail.com",
-  whatsappUrl: "https://wa.me/5561995898122",
-  whatsappLabel: "+55 (61) 9 9589-8122",
-  year: 2026,
-  socials: {
-    github: "https://github.com/FabianoArthur",
-    linkedin:
-      "https://www.linkedin.com/in/fabiano-arthur-p-c-de-oliveira-30bb39215/",
-  },
+  github: "https://github.com/FabianoArthur",
+  linkedin: "https://www.linkedin.com/in/fabiano-arthur-p-c-de-oliveira-30bb39215/",
+  source: "https://github.com/FabianoArthur/portifolio",
 } as const;
 
-export const stack = [
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node",
-  "Python",
-  "Go",
-  "Postgres",
-  "Docker",
-] as const;
-
-export type NavKey = "work" | "about" | "contact";
-
-export const navLinks: Array<{ key: NavKey; href: string }> = [
+export const navLinks = [
   { key: "work", href: "#work" },
   { key: "about", href: "#about" },
+  { key: "stack", href: "#stack" },
   { key: "contact", href: "#contact" },
+] as const;
+
+export type StackGroup = "languages" | "frontend" | "backend" | "data" | "ai";
+
+export const stack: ReadonlyArray<{ group: StackGroup; items: readonly string[] }> = [
+  { group: "languages", items: ["TypeScript", "Python", "Java", "SQL"] },
+  { group: "frontend", items: ["React", "Next.js", "Vite", "Tailwind CSS"] },
+  { group: "backend", items: ["Node.js", "NestJS", "FastAPI", "Spring Boot"] },
+  { group: "data", items: ["PostgreSQL", "MongoDB", "Docker", "GitHub Actions"] },
+  { group: "ai", items: ["Claude Code", "Agent workflows", "MCP", "tmux"] },
 ];
-
-export type ApproachTagKey = "typeSafe" | "tested" | "observable" | "documented";
-export const approachTags: ApproachTagKey[] = [
-  "typeSafe",
-  "tested",
-  "observable",
-  "documented",
-];
-
-export type StatKey = "years" | "tech" | "coffees" | "goal";
-export const stats: Array<{ key: StatKey; n: string }> = [
-  { key: "years", n: "4" },
-  { key: "tech", n: "12+" },
-  { key: "coffees", n: "∞" },
-  { key: "goal", n: "1" },
-];
-
-export type Locale = "pt" | "en" | "es" | "zh";
-
-export const locales: Locale[] = ["pt", "en", "es", "zh"];
-export const defaultLocale: Locale = "pt";
-
-export const localeLabels: Record<Locale, string> = {
-  pt: "PT",
-  en: "EN",
-  es: "ES",
-  zh: "中",
-};

@@ -1,28 +1,31 @@
 import { useTranslations } from "next-intl";
-import { Reveal } from "./Reveal";
 import { stack } from "@/lib/site";
+import { Section } from "./Section";
 
 export function Stack() {
   const t = useTranslations("stack");
+
   return (
-    <section className="px-6 pb-20 text-center md:px-16">
-      <Reveal>
-        <div className="mb-5 text-xs uppercase tracking-[0.15em] text-dim">
-          {t("heading")}
-        </div>
-      </Reveal>
-      <Reveal delay={0.05}>
-        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 opacity-70">
-          {stack.map((s) => (
-            <span
-              key={s}
-              className="text-lg font-medium tracking-[-0.01em]"
-            >
-              {s}
-            </span>
-          ))}
-        </div>
-      </Reveal>
-    </section>
+    <Section id="stack" eyebrow={t("eyebrow")} title={t("title")}>
+      <dl className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
+        {stack.map(({ group, items }, i) => (
+          <div
+            key={group}
+            data-reveal
+            style={{ "--reveal-delay": `${i * 50}ms` } as React.CSSProperties}
+            className="bg-bg p-5"
+          >
+            <dt className="font-mono text-[11px] uppercase tracking-[0.16em] text-accent">{t(`groups.${group}`)}</dt>
+            <dd className="mt-3">
+              <ul className="space-y-1.5 text-[15px]">
+                {items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </Section>
   );
 }

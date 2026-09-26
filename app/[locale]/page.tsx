@@ -1,43 +1,41 @@
-import { setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
-import { Nav } from "@/components/Nav";
-import { Hero } from "@/components/Hero";
-import { Stack } from "@/components/Stack";
 import { About } from "@/components/About";
-import { VariationsShowcase } from "@/components/VariationsShowcase";
-import { Stats } from "@/components/Stats";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { VariationSwitcher } from "@/components/VariationSwitcher";
+import { Hero } from "@/components/Hero";
+import { Nav } from "@/components/Nav";
+import { Projects } from "@/components/Projects";
+import { RevealObserver } from "@/components/RevealObserver";
+import { SkipLink } from "@/components/SkipLink";
+import { Stack } from "@/components/Stack";
+import { routing } from "@/i18n/routing";
 
-export default async function Home({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
 
   return (
     <>
+      <SkipLink />
       <Nav />
-      <main className="flex-1">
+      <main id="content" tabIndex={-1} className="flex-1 outline-none">
         <Hero />
-        <Stack />
+        <Projects />
         <About />
-        <VariationsShowcase />
-        <Stats />
+        <Stack />
         <Contact />
       </main>
       <Footer />
-      <VariationSwitcher
-        current="v4-dark"
-        accent="#b48cff"
-        locale={locale as "pt" | "en" | "es" | "zh"}
-      />
+      <RevealObserver />
     </>
   );
 }

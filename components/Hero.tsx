@@ -1,65 +1,54 @@
 import { useTranslations } from "next-intl";
-import { Chip } from "./Chip";
-import { Reveal } from "./Reveal";
-import { site } from "@/lib/site";
+import { ArrowUpRightIcon } from "./Icons";
 
 export function Hero() {
   const t = useTranslations("hero");
 
   return (
-    <section className="px-6 pb-24 pt-20 text-center md:px-16 md:pb-[100px] md:pt-[120px]">
-      <Reveal>
-        <Chip>{t("chip", { year: site.year })}</Chip>
-      </Reveal>
+    <section aria-labelledby="hero-title" className="mx-auto w-full max-w-6xl px-4 pb-20 pt-20 sm:px-6 md:pb-28 md:pt-32">
+      <p data-reveal className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-dim">
+        <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-ok" />
+        {t("eyebrow")}
+      </p>
 
-      <Reveal delay={0.05}>
-        <h1 className="mt-7 font-serif text-[64px] font-normal leading-[1] tracking-[-0.04em] sm:text-[88px] md:text-[112px] lg:text-[136px]">
-          {t("h1Line1")}
-          <br />
-          <span
-            className="italic"
-            style={{
-              backgroundImage: "linear-gradient(180deg, #fff 0%, #b48cff 100%)",
-              WebkitBackgroundClip: "text",
-              backgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              color: "transparent",
-            }}
-          >
-            {t("h1Line2")}
-          </span>
-        </h1>
-      </Reveal>
+      <h1
+        id="hero-title"
+        data-reveal
+        style={{ "--reveal-delay": "60ms" } as React.CSSProperties}
+        className="mt-7 max-w-4xl font-serif text-[3.25rem] leading-[0.98] tracking-[-0.035em] sm:text-7xl md:text-8xl"
+      >
+        {t("titleLine1")}{" "}
+        <span className="text-gradient italic">{t("titleLine2")}</span>
+      </h1>
 
-      <Reveal delay={0.15}>
-        <p className="mx-auto mt-8 max-w-[620px] text-lg leading-[1.5] text-dim md:text-xl">
-          {t.rich("body", {
-            name: (chunks) => <span className="text-ink">{chunks}</span>,
-          })}
-        </p>
-      </Reveal>
+      <p
+        data-reveal
+        style={{ "--reveal-delay": "120ms" } as React.CSSProperties}
+        className="mt-8 max-w-2xl text-lg leading-relaxed text-dim md:text-xl"
+      >
+        {t.rich("body", { name: (chunks) => <strong className="font-medium text-ink">{chunks}</strong> })}
+      </p>
 
-      <Reveal delay={0.2}>
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2.5 rounded-[10px] px-5 py-3.5 text-sm font-semibold text-bg transition-transform hover:-translate-y-0.5"
-            style={{
-              background: "linear-gradient(180deg, #f6f4ef 0%, #d6d2c8 100%)",
-              boxShadow:
-                "0 0 0 1px rgba(255,255,255,.4), 0 12px 30px -10px rgba(255,255,255,.2)",
-            }}
-          >
-            {t("ctaPrimary")} <span aria-hidden>→</span>
-          </a>
-          <a
-            href="#work"
-            className="inline-flex items-center gap-2.5 rounded-[10px] border border-white/10 bg-white/[0.04] px-5 py-3.5 text-sm font-medium text-ink transition-colors hover:bg-white/[0.07]"
-          >
-            {t("ctaSecondary")}
-          </a>
-        </div>
-      </Reveal>
+      <div
+        data-reveal
+        style={{ "--reveal-delay": "180ms" } as React.CSSProperties}
+        className="mt-10 flex flex-wrap gap-3"
+      >
+        <a
+          href="#work"
+          className="inline-flex h-12 items-center gap-2 rounded-xl bg-ink px-5 text-sm font-semibold text-bg transition-transform hover:-translate-y-0.5"
+        >
+          {t("ctaPrimary")}
+          <span aria-hidden>→</span>
+        </a>
+        <a
+          href="#contact"
+          className="inline-flex h-12 items-center gap-2 rounded-xl border border-line-strong bg-surface px-5 text-sm font-medium transition-colors hover:bg-surface-hover"
+        >
+          {t("ctaSecondary")}
+          <ArrowUpRightIcon />
+        </a>
+      </div>
     </section>
   );
 }

@@ -1,54 +1,136 @@
 @import "tailwindcss";
 
-@theme {
-  --color-bg: #0a0a0c;
-  --color-ink: #e8e6e3;
-  --color-purple: #b48cff;
-  --color-cyan: #6ad2ff;
-  --color-green: #7cff9c;
-  --color-whatsapp: #25d366;
-  --color-dim: rgba(232, 230, 227, 0.55);
-  --color-line: rgba(255, 255, 255, 0.07);
-  --color-line-strong: rgba(255, 255, 255, 0.1);
-  --color-surface: rgba(255, 255, 255, 0.04);
-  --color-surface-2: rgba(255, 255, 255, 0.02);
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-  --color-v3-ink: #000000;
-  --color-v3-cream: #e8e6df;
-  --color-v3-orange: #ff4d1c;
-  --color-v3-yellow: #fffd9c;
-  --color-v3-green: #7cff7c;
-  --color-v3-blue: #9cb8ff;
-
-  --color-v5-ink: #1c1410;
-  --color-v5-cream: #fff7ea;
-  --color-v5-orange: #ff5b1f;
-  --color-v5-yellow: #ffd34e;
-  --color-v5-pink: #ff5fa2;
-  --color-v5-purple: #7a52f5;
-  --color-v5-blue: #2a6fdb;
-  --color-v5-green: #1f8a5b;
-
-  --color-v6-cream: #f0e5cf;
-  --color-v6-paper: #e8d9b8;
-  --color-v6-ink: #3a1f0d;
-  --color-v6-orange: #d4501e;
-  --color-v6-rust: #8b3a0a;
-  --color-v6-teal: #2d6b6b;
-  --color-v6-mustard: #c79a2a;
-
-  --font-sans: var(--font-inter), "SF Pro Text", -apple-system, system-ui, sans-serif;
-  --font-serif: var(--font-instrument-serif), "Times New Roman", serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Liberation Mono", monospace;
+/* Theme tokens. Dark is the default so a no-JS visitor still gets a coherent page;
+   the inline head script sets data-theme before first paint. */
+:root,
+:root[data-theme="dark"] {
+  --bg: #0a0a0c;
+  --bg-elevated: #121216;
+  --ink: #ecebe8;
+  --dim: #a4a2aa;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.14);
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-hover: rgba(255, 255, 255, 0.06);
+  --accent: #b894ff;
+  --accent-2: #6ad2ff;
+  --on-accent: #0a0a0c;
+  --glow: rgba(180, 140, 255, 0.16);
+  --ok: #7cff9c;
+  color-scheme: dark;
 }
 
-html,
+:root[data-theme="light"] {
+  --bg: #f7f6f2;
+  --bg-elevated: #ffffff;
+  --ink: #16151a;
+  --dim: #55535c;
+  --line: rgba(22, 21, 26, 0.1);
+  --line-strong: rgba(22, 21, 26, 0.18);
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-hover: #ffffff;
+  --accent: #6a3dd1;
+  --accent-2: #0a6f96;
+  --on-accent: #ffffff;
+  --glow: rgba(106, 61, 209, 0.12);
+  --ok: #17803d;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-ink: var(--ink);
+  --color-dim: var(--dim);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-on-accent: var(--on-accent);
+  --color-ok: var(--ok);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
+  background-color: var(--bg);
+  background-image: radial-gradient(
+    ellipse 1100px 560px at 50% -12%,
+    var(--glow),
+    transparent 62%
+  );
+  background-repeat: no-repeat;
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: rgba(180, 140, 255, 0.3);
-  color: #fff;
+  background: color-mix(in srgb, var(--accent) 30%, transparent);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Anchored sections clear the sticky header. */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+.text-gradient {
+  background-image: linear-gradient(180deg, var(--ink) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Reveal-on-scroll (components/RevealObserver.tsx): only armed once the
+   observer is running, so content is never hidden without working JS. */
+.reveal-ready [data-reveal] {
+  transition:
+    opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-ready [data-reveal]:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-ready [data-reveal],
+  .reveal-ready [data-reveal]:not(.is-visible) {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
