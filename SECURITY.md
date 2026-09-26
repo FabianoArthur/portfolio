@@ -3,7 +3,7 @@
 ## Reporting a vulnerability
 
 Please **don't open a public issue**. Report it privately through
-[GitHub private vulnerability reporting](https://github.com/FabianoArthur/portifolio/security/advisories/new)
+[GitHub private vulnerability reporting](https://github.com/FabianoArthur/portfolio/security/advisories/new)
 or by email to fabianoarthur47@gmail.com. I'll acknowledge within a few days.
 
 ## What this site does to stay safe

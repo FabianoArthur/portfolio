@@ -4,7 +4,7 @@
 
 [Português (Brasil)](README.pt-BR.md) · **Live site:** <https://fabianoarthur.github.io/portifolio/>
 
-[![CI](https://github.com/FabianoArthur/portifolio/actions/workflows/ci.yml/badge.svg)](https://github.com/FabianoArthur/portifolio/actions/workflows/ci.yml)
+[![CI](https://github.com/FabianoArthur/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/FabianoArthur/portfolio/actions/workflows/ci.yml)
 ![Next.js 16](https://img.shields.io/badge/Next.js-16-black)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 
