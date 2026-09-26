@@ -36,7 +36,7 @@
   "about": {
     "eyebrow": "About",
     "title": "From the API to the last pixel.",
-    "p1": "I work across the stack: data models, APIs, queues, front-ends and the pipelines that ship them. By day that means fleet tracking and telemetry; after hours, tooling that lets AI agents do real engineering work without making a mess.",
+    "p1": "I work across the stack: data models, APIs, queues, front-ends and the pipelines that ship them. Lately that includes tooling that lets AI agents do real engineering work without making a mess.",
     "p2": "I care about small releases, honest tests and docs that answer the next person's question before they ask it.",
     "principles": {
       "tested": {

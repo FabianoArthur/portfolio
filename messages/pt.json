@@ -36,7 +36,7 @@
   "about": {
     "eyebrow": "Sobre",
     "title": "Da API ao último pixel.",
-    "p1": "Trabalho na stack inteira: modelagem de dados, APIs, filas, front-ends e os pipelines que colocam tudo no ar. De dia, isso é rastreamento de frota e telemetria; fora do expediente, ferramentas que deixam agentes de IA fazer engenharia de verdade sem bagunçar o repositório.",
+    "p1": "Trabalho na stack inteira: modelagem de dados, APIs, filas, front-ends e os pipelines que colocam tudo no ar. Ultimamente, isso inclui ferramentas que deixam agentes de IA fazer engenharia de verdade sem bagunçar o repositório.",
     "p2": "Gosto de entregas pequenas, testes honestos e documentação que responde a pergunta da próxima pessoa antes que ela pergunte.",
     "principles": {
       "tested": {

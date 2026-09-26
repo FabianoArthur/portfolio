@@ -24,13 +24,13 @@ Why it's worth a look as code:
 - **Fully static, no server.** Next.js 16 (App Router) with `output: "export"`: both
   languages are prerendered at build time into plain HTML, CSS and JS.
 - **Bilingual by design.** `next-intl` with one message catalogue per language; a test
-  fails the build if a key, a placeholder or a project's copy is missing in either language.
+  fails CI if a key, a placeholder or a project's copy is missing in either language.
   The root page picks English or Portuguese from the browser, with plain links as the no-JS fallback.
 - **Light and dark, no flash.** A tiny inline script sets the theme before first paint
   (system preference, or the visitor's saved choice).
 - **Accessible.** Semantic landmarks, a skip link, visible focus, labelled controls,
   `prefers-reduced-motion` respected, content never hidden when JavaScript fails.
-  Lighthouse accessibility: **100**.
+  Lighthouse (measured locally on the production build): accessibility **100**, performance 95–100.
 - **Secure by default.** A strict Content-Security-Policy (no third-party origins),
   injected before every resource and verified after each build; secret scanning in CI;
   actions pinned by SHA. See [SECURITY.md](SECURITY.md).
