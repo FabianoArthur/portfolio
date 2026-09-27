@@ -98,6 +98,7 @@ export const projects: readonly Project[] = [
       { label: "barbearia-backend", url: gh("barbearia-backend") },
       { label: "barbearia-frontend", url: gh("barbearia-frontend") },
     ],
+    demo: pages("barbearia-frontend"),
     tech: ["NestJS", "Prisma", "PostgreSQL", "React"],
   },
 ];
