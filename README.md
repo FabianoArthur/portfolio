@@ -2,7 +2,7 @@
 
 **A fast, accessible, bilingual (English / Português) portfolio with light and dark themes — a fully static Next.js site deployed to GitHub Pages.**
 
-[Português (Brasil)](README.pt-BR.md) · **Live site:** <https://fabianoarthur.github.io/portifolio/>
+[Português (Brasil)](README.pt-BR.md) · **Live site:** <https://fabianoarthur.github.io/portfolio/>
 
 [![CI](https://github.com/FabianoArthur/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/FabianoArthur/portfolio/actions/workflows/ci.yml)
 ![Next.js 16](https://img.shields.io/badge/Next.js-16-black)
@@ -66,7 +66,7 @@ npm run check:export   # verifies pages, lang, CSP placement, no local paths
 npx serve out          # or any static file server
 ```
 
-To reproduce the GitHub Pages sub-path locally: `PAGES_BASE_PATH=/portifolio npm run build`.
+To reproduce the GitHub Pages sub-path locally: `PAGES_BASE_PATH=/portfolio npm run build`.
 Environment variables are optional and documented in [`.env.example`](.env.example).
 
 ## Project layout

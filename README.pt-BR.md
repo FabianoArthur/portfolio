@@ -2,7 +2,7 @@
 
 **Um portfólio rápido, acessível e bilíngue (inglês / português), com temas claro e escuro — um site Next.js totalmente estático publicado no GitHub Pages.**
 
-[English](README.md) · **Site no ar:** <https://fabianoarthur.github.io/portifolio/pt/>
+[English](README.md) · **Site no ar:** <https://fabianoarthur.github.io/portfolio/pt/>
 
 [![CI](https://github.com/FabianoArthur/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/FabianoArthur/portfolio/actions/workflows/ci.yml)
 ![Next.js 16](https://img.shields.io/badge/Next.js-16-black)
@@ -66,7 +66,7 @@ npm run check:export   # confere páginas, lang, posição da CSP e ausência de
 npx serve out          # ou qualquer servidor de arquivos estáticos
 ```
 
-Para reproduzir o subcaminho do GitHub Pages: `PAGES_BASE_PATH=/portifolio npm run build`.
+Para reproduzir o subcaminho do GitHub Pages: `PAGES_BASE_PATH=/portfolio npm run build`.
 As variáveis de ambiente são opcionais e estão documentadas no [`.env.example`](.env.example).
 
 ## Estrutura

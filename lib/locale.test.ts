@@ -41,7 +41,7 @@ describe("localeRedirectScript", () => {
   }
 
   it("redirects to the preferred locale under the base path", () => {
-    expect(run(["pt-BR", "en"], "/portifolio")).toEqual(["/portifolio/pt/"]);
+    expect(run(["pt-BR", "en"], "/portfolio")).toEqual(["/portfolio/pt/"]);
     expect(run(["en-US"], "")).toEqual(["/en/"]);
   });
 
